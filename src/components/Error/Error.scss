@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.error-component {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__message {
+		background-color: $error-bg-color;
+		color: $white;
+		padding: 15px;
+	}
+}

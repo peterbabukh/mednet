@@ -1,0 +1,42 @@
+@import './_variables';
+@import './_mixins';
+
+.clickable {
+	cursor: pointer;
+}
+
+.success-message {
+	@include message();
+	background-color: $success-bg-color;
+	color: $white;
+}
+
+.warn-message {
+	@include message();
+	background-color: $warn-bg-color;
+	color: $white;
+}
+
+.error-message {
+	@include message();
+	background-color: $error-bg-color;
+	color: $white;
+}
+
+.success-text {
+	@include message();
+	background-color: inherit;
+	color: $success-bg-color;
+}
+
+.warn-text {
+	@include message();
+	background-color: inherit;
+	color: $warn-bg-color;
+}
+
+.error-text {
+	@include message();
+	background-color: inherit;
+	color: $error-bg-color;
+}

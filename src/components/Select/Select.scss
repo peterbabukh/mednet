@@ -1,0 +1,69 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  background-color: $white;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $select-arrow-size $select-arrow-size 0 $select-arrow-size;
+    border-color: $select-arrow-color transparent transparent transparent;
+    position: relative;
+    right: 5px;
+    margin: 0 0 0 -10px;
+    pointer-events: none;
+  }
+
+  &.disabled {
+    color: $disabled-default-color;
+    background-color: $disabled-default-bgcolor;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+
+    &:after {
+      border-color: $default-border-color transparent transparent transparent;
+    }
+  }
+
+  select {
+    width: 100%;
+    @include select();
+    color: currentColor;
+
+    &.default {
+      height: 22px;
+    }
+  }
+
+  .header & {
+    background: transparent;
+
+    select {
+      min-width: 0;
+      border: 0;
+
+      option {
+        color: $default-color;
+      }
+
+      &:focus {
+        border: 0;
+      }
+    }
+
+    &.theme-switch {
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
+    }
+  }
+}

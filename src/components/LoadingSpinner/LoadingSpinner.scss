@@ -1,0 +1,90 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$default: 75px;
+$small: 20px;
+$medium: 50px;
+$big: 100px;
+
+.loading-spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+	width: 100%;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		height: $default;
+		width: $default;
+    @include themify($themes) {
+      border: 4px solid themed('activeColor');
+      border-top: 4px solid transparent;
+    }
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+	}
+
+	&.small {
+		height: $small;
+
+		&:after {
+			height: $small;
+			width: $small;
+		}
+	}
+
+	&.medium {
+    height: $medium;
+
+    &:after {
+      height: $medium;
+      width: $medium;
+    }
+	}
+
+	&.big {
+    height: $big;
+
+    &:after {
+      height: $big;
+      width: $big;
+    }
+  }
+
+  .order-entry-module & {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: $spinner-min-height;
+    width: auto;
+  }
+
+  &.export-data__loading-spinner {
+    position: static;
+    transform: none;
+    height: 18px;
+    width: 18px;
+    &:after {
+      border: 2px solid $warn-color;
+      border-top: 2px solid transparent;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .export-data-overlay__status-container & {
+    width: auto;
+    margin-right: $container-margin;
+  }
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,213 @@
+@import './_variables';
+@import './_themes';
+@import './_functions';
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@mixin box-shadow {
+	box-shadow: $default-box-shadow;
+}
+
+@mixin css-cut {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@mixin button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding: $button-default-padding;
+  white-space: nowrap;
+	transition: background-color 0.2s ease;
+	user-select: none;
+	text-transform: uppercase;
+	text-decoration: none;
+	outline: none;
+  cursor: pointer;
+  @include themify($themes) {
+    color: themed('btnColor');
+    background-color: themed('btnBgColor');
+    border: 1px solid themed('btnBorderColor');
+    box-shadow: themed('btnBoxShadow');
+    border-radius: themed('btnBorderRadius');
+  }
+
+  &.active {
+    @include themify($themes) {
+      background-color: themed('activeColor');
+      color: themed('btnBgColor');
+    }
+  }
+
+	&:hover {
+    color: $white;
+    @include themify($themes) {
+      background-color: themed('activeColor');
+    }
+	}
+}
+
+@mixin fullscreen-backdrop-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $modal-bg-color-halfdark;
+  box-sizing: border-box;
+  padding: $overlay-container-padding-small;
+  z-index: $fullscreen-backdrop-overlay-z-index;
+}
+
+@mixin button-sm {
+	@include button();
+	padding: $button-sm-default-padding;
+}
+
+@mixin button-min-size {
+  min-height: $button-default-height;
+  min-width: $button-min-width;
+}
+
+@mixin button-primary {
+  color: $white;
+  @include themify($themes) {
+    background-color: themed('activeColor');
+  }
+
+  &:hover {
+    opacity: $button-hover-opacity;
+  }
+}
+
+@mixin button-transparent {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+  @include themify($themes) {
+    color: themed('activeColor');
+  }
+
+  &:hover {
+    opacity: $button-hover-opacity;
+    background-color: transparent;
+  }
+}
+
+@mixin button-active {
+  @include button-primary();
+}
+
+@mixin card {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+@mixin message {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+
+	&.clickable {
+		&:hover {
+			opacity: $button-hover-opacity;
+		}
+	}
+}
+
+@mixin input-focus {
+  &:focus {
+    outline: 0;
+    border: 1px solid $focused-border-color;
+  }
+}
+
+@mixin input-disabled {
+  &[disabled] {
+    color: $disabled-default-color;
+    background-color: $disabled-default-bgcolor;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin input {
+	box-sizing: border-box;
+	font-size: $text-default-font-size;
+	min-width: $grid-cell-min-width;
+	padding: $input-padding;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid $default-border-color;
+  border-radius: 0;
+
+  @include input-focus();
+  @include input-disabled();
+
+	&.warn {
+		border: 1px solid $warn-text-color;
+
+    &:focus {
+      border: 1px solid $warn-text-color;
+    }
+	}
+	&.error {
+		border: 1px solid $error-text-color;
+
+    &:focus {
+      border: 1px solid $error-text-color;
+    }
+	}
+}
+
+@mixin select {
+  background-color: transparent;
+  position: relative;
+  padding-right: 20px;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+@mixin link {
+	color: $default-text-color;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+
+	&.active {
+    @include themify($themes) {
+      color: themed('activeColor');
+    }
+	}
+
+	&:hover {
+    @include themify($themes) {
+      color: themed('activeColor');
+    }
+	}
+}

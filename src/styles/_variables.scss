@@ -1,0 +1,138 @@
+// color variables
+$white: #ffffff;
+$red: #ff6358;
+$error-red: #e4342d;
+$deep-red: #e30b2a;
+$light-grey: #fafafa;
+$grey: #efefef;
+$mid-grey: #e6e6e6;
+$dark-grey: #d7d7d7;
+$darker-grey: #a3a3a3;
+$darkest-grey: #737373;
+$black: #000000;
+$lighter-black: #454545;
+$light-blue-grey: #466969;
+$orange: #f19300;
+$tile-color: #12e09b;
+$blue-color: #0000fe;
+$light-blue: #259bd3;
+$deep-light-blue: #189bd5;
+$yellow: #ffff00;
+
+$default-color: $black;
+$theme-color: $light-blue-grey;
+$active-text-color: $light-blue;
+$success-color: $tile-color;
+$error-color: $error-red;
+$warn-color: $orange;
+$hover-grey-color: $mid-grey;
+$text-highlight-color: $yellow;
+
+/* Fonts */
+$font-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-default: "Open Sans", $font-fallback;
+$font-condensed: "PT Sans Narrow", $font-default;
+$text-default-font-size: 16px;
+$text-sm-font-size: 14px;
+$text-xs-font-size: 12px;
+
+/* text colors */
+$default-text-color: $default-color;
+$theme-text-color: $theme-color;
+$success-text-color: $success-color;
+$warn-text-color: $warn-color;
+$error-text-color: $error-color;
+$icon-color: $theme-color;
+$active-icon-color: $active-text-color;
+$success-icon-color: $success-color;
+$warn-icon-color: $warn-color;
+$error-icon-color: $error-color;
+$disabled-default-color: $darker-grey;
+
+/* background colors */
+$hover-bg-color: $light-blue;
+$success-bg-color: $success-color;
+$warn-bg-color: $warn-color;
+$error-bg-color: $error-color;
+$disabled-default-bgcolor: $grey;
+
+/* border colors */
+$default-border-color: $dark-grey;
+$focused-border-color: $blue-color;
+
+/* Height */
+$input-default-height: 20px;
+$input-md-height: 28px;
+$button-default-height: 20px;
+$button-sm-default-height: 15px;
+$spinner-min-height: 200px;
+$textarea-default-min-height: 40px;
+$textarea-default-max-height: 200px;
+$compact-table-row-height: $input-default-height;
+$pagination-item-height: 18px;
+$grid-row-min-height: 45px;
+
+/* Width */
+$button-container-max-width: 500px;
+$button-max-width: 200px;
+$button-min-width: 100px;
+$input-compact-width: 70px;
+
+/* Margin */
+$default-margin: 5px;
+$container-margin: $default-margin * 2;
+$inline-siblings-default-margin: 4px;
+$siblings-block-margin: 30px;
+
+/* Paddings */
+$default-padding: 5px;
+$container-padding: $default-padding * 2;
+$sidebar-padding: $default-padding * 4;
+$sidebar-y-icons-pos: 17px;
+$input-padding: 4px;
+$grid-cell-padding-y: 3px;
+$grid-cell-padding-x: $grid-cell-padding-y * 2;
+$row-padding: $container-padding;
+$overlay-container-padding: 40px;
+$overlay-container-padding-small: $overlay-container-padding / 2;
+$button-default-padding: 0.4rem 0.8rem;
+$button-sm-default-padding: 0.3rem 0.8rem;
+
+/* Modal */
+$modal-bg-color-light: #fff;
+$modal-bg-color-dark: #000;
+$modal-bg-color-halfdark: rgba($modal-bg-color-dark, 0.25);
+
+/* Breakpoints */
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+/* z-index */
+/*
+react-toastify toasts have z-index 9999, which should be the maximum used here.
+To have a picture of all z-index values used, they all should be ranged here.
+*/
+$modal-root-overlay-z-index: 1000;
+$modal-root-content-z-index: $modal-root-overlay-z-index + 1;
+$fullscreen-backdrop-overlay-z-index: 5;
+
+/* Other */
+$default-border-radius: 4px;
+$button-hover-opacity: 0.75;
+$default-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.08);
+$btn-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+$select-arrow-size: 5px;
+$select-arrow-color: $black;
+
+$icon-18: 18px;
+$icon-22: 22px;
+$icon-24: 24px;
+$icon-28: 28px;
+$icon-32: 32px;
+$icon-48: 48px;
+$icon-64: 64px;

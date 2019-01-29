@@ -1,0 +1,7 @@
+@import "../../styles/_variables";
+
+.divider {
+  height: 2px;
+  background-color: $default-border-color;
+  margin: $container-margin;
+}

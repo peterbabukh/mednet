@@ -1,0 +1,23 @@
+@import 'styles/_index';
+
+body {
+	font-family: $font-fallback;
+	font-size: $text-sm-font-size;
+
+  &.fontLoaded {
+    font-family: $font-default;
+  }
+}
+
+strong,
+b {
+	font-weight: bold;
+}
+
+.page-not-found {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+}

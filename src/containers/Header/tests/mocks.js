@@ -1,0 +1,3 @@
+const headerPropsMock = {};
+
+export { headerPropsMock };

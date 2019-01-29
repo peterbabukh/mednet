@@ -1,0 +1,8 @@
+@function themed($key) {
+  @if map-has-key($theme-map, $key) {
+    @return map-get($theme-map, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $theme-map.";
+  @return null;
+}

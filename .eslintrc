@@ -1,0 +1,33 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/jsx-uses-vars": "error",
+      "no-empty": ["error", {
+        "allowEmptyCatch": true
+      }]
+    },
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": "./config/webpack.config.prod.js"
+        }
+      },
+      "react": {
+        "version": "16.4"
+      }
+    }
+  }

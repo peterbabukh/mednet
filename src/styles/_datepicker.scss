@@ -1,0 +1,24 @@
+@import '../../node_modules/react-datepicker/src/stylesheets/variables';
+@import './_variables';
+@import './_mixins';
+
+$datepicker__background-color: $grey;
+$datepicker__border-color: $default-border-color;
+$datepicker__highlighted-color: $mid-grey;
+$datepicker__selected-color: $blue-color;
+$datepicker__text-color: $theme-color;
+$datepicker__header-color: $theme-color;
+$datepicker__border-radius: $default-border-radius;
+$datepicker__font-family: $font-fallback;
+
+@import '../../node_modules/react-datepicker/src/stylesheets/datepicker';
+
+.react-datepicker {
+  &__day--selected,
+  &__day--in-selecting-range,
+  &__day--in-range {
+    @include themify($themes) {
+      background-color: themed('datePickerSelectedBgColor');
+    }
+  }
+}

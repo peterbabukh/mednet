@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button {
+  @include button();
+
+  &.min-size {
+    @include button-min-size();
+  }
+
+  &.primary {
+    @include button-primary();
+  }
+
+  &.transparent {
+    @include button-transparent();
+  }
+
+  &.active {
+    @include button-active();
+  }
+
+  .icon {
+    &:not(:last-child) {
+      margin-right: $default-margin;
+    }
+  }
+}

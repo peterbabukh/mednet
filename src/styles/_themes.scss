@@ -1,0 +1,32 @@
+@import './_variables';
+
+$themes: (
+  defaultTheme: (
+    themeColor: $lighter-black,
+    themeBackgroundColor: $white,
+    activeColor: $red,
+    activeBackgroundColor: $red,
+    btnColor: $red,
+    btnBgColor: $white,
+    btnBorderColor: $red,
+    btnBoxShadow: none,
+    btnBorderRadius: $default-border-radius,
+    headerColor: $black,
+    headerBgColor: $white,
+    datePickerSelectedBgColor: $red,
+  ),
+  darkTheme: (
+    themeColor: $black,
+    themeBackgroundColor: $grey,
+    activeColor: $red,
+    activeBackgroundColor: $red,
+    btnColor: $black,
+    btnBgColor: $white,
+    btnBorderColor: $black,
+    btnBoxShadow: none,
+    btnBorderRadius: $default-border-radius,
+    headerColor: $white,
+    headerBgColor: $darkest-grey,
+    datePickerSelectedBgColor: $grey,
+  ),
+);

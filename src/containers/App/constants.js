@@ -1,0 +1,29 @@
+export const DEFAULT_USER = 'default';
+export const DEFAULT_USER_NAME = 'anonim';
+export const LOCAL_LANG = 'MEDNET_LANGUAGE';
+export const DEFAULT_THEME = 'defaultTheme';
+export const DARK_THEME = 'darkTheme';
+
+export const SET_ERROR = 'SET_ERROR';
+export const CHANGE_LOCALE = 'CHANGE_LOCALE';
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
+export const SAVE_USER_DATA_TO_DB = 'SAVE_USER_DATA_TO_DB';
+export const SET_THEME = 'SET_THEME';
+
+export const SET_UNSAVED_DATA = 'SET_UNSAVED_DATA';
+export const SET_UNSAVED_DATA_FROM_DB = 'SET_UNSAVED_DATA_FROM_DB';
+
+export default {
+  DEFAULT_USER,
+  DEFAULT_USER_NAME,
+  LOCAL_LANG,
+  DEFAULT_THEME,
+  DARK_THEME,
+  SET_ERROR,
+  CHANGE_LOCALE,
+  SET_CURRENT_USER,
+  SAVE_USER_DATA_TO_DB,
+  SET_THEME,
+  SET_UNSAVED_DATA,
+  SET_UNSAVED_DATA_FROM_DB,
+};
