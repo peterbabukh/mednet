@@ -16,6 +16,7 @@ import Helmet from '../../components/HelmetIntl';
 import injectSaga from '../../utils/injectSaga';
 import messages from './messages';
 import ModalRoot from '../../containers/ModalRoot';
+import Sidebar from '../../components/Sidebar';
 import saga from './saga';
 
 import {
@@ -35,6 +36,7 @@ export class AppComponent extends React.Component {
   render() {
     return (
       <div className="app">
+        <Sidebar />
         <Header />
         <div className="main">
           <Switch>

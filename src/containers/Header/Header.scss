@@ -13,4 +13,8 @@
     color: themed('headerColor');
     background-color: themed('headerBgColor');
   }
+  
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
 }
