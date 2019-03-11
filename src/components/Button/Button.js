@@ -38,6 +38,7 @@ Button.propTypes = {
     PropTypes.oneOf(variants),
     PropTypes.arrayOf(PropTypes.oneOf(variants)),
   ]),
+  children: PropTypes.node,
 };
 
 export default Button;
