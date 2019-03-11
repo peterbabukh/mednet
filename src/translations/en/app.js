@@ -32,4 +32,12 @@ export default {
     'The operation failed with errors: {error}',
   'errors.unsavedDataExists':
     'Unsaved data exists. Please, either reset or save them.',
+
+  'contactUs.phone': 'Contact us by Phone',
+  'contactUs.whatsapp': 'Contact us by WhatsApp',
+  'contactUs.skype': 'Contact us by Skype',
+  'contactUs.email': 'Write us an E-mail',
+
+  'sidebar.logoTitle': 'MedNet logo',
+  'sidebar.logoAlt': 'MedNet',
 };
