@@ -57,6 +57,7 @@ Select.propTypes = {
   options: PropTypes.array.isRequired,
   intl: intlShape,
   intlKey: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 export default injectIntl(Select);

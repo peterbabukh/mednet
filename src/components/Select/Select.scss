@@ -66,4 +66,21 @@
       }
     }
   }
+
+  .sidebar & {
+    background: transparent;
+
+    select {
+      min-width: 0;
+      border: 0;
+
+      option {
+        color: $default-color;
+      }
+
+      &:focus {
+        border: 0;
+      }
+    }
+  }
 }

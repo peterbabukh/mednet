@@ -38,6 +38,7 @@ $text-xs-font-size: 12px;
 
 /* text colors */
 $default-text-color: $default-color;
+$dark-theme-text-color: $white;
 $theme-text-color: $theme-color;
 $success-text-color: $success-color;
 $warn-text-color: $warn-color;
@@ -55,6 +56,8 @@ $success-bg-color: $success-color;
 $warn-bg-color: $warn-color;
 $error-bg-color: $error-color;
 $disabled-default-bgcolor: $grey;
+$default-bg-color: $white;
+$dark-theme-bg-color: $darkest-grey;
 
 /* border colors */
 $default-border-color: $dark-grey;

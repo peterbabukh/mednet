@@ -1,0 +1,105 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$sidebar-header-default-height: 50px;
+$sidebar-header-default-padding: 6px;
+$sidebar-default-height: 100%;
+$sidebar-default-width: 280px;
+$sidebar-max-width: 70%;
+$sidebar-logo-default-width: 40%;
+$sidebar-contacts-default-margin: 30px 0px;
+$sidebar-contacts-item-default-padding: 10px 0;
+$sidebar-default-box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.08);
+
+.sidebar {
+  display: flex;
+  height: $sidebar-header-default-height;
+  padding: $sidebar-header-default-padding;
+  box-shadow: $default-box-shadow;
+
+  @include themify($themes) {
+    color: themed('sidebarColor');
+    background-color: themed('sidebarBgColor');
+  }
+
+  @media (min-width: $screen-xs-max) {
+    display: none;
+  }
+
+  &__menu-content {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: $sidebar-default-width;
+    max-width: $sidebar-max-width;
+    height: $sidebar-default-height;  
+    padding: $sidebar-padding;
+    box-shadow: $sidebar-default-box-shadow;
+
+    @include themify($themes) {
+      color: themed('sidebarColor');
+      background-color: themed('sidebarBgColor');
+    }
+  }
+  
+  &__menu-hamburger {
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+    font-size: $icon-32;
+    cursor: pointer;
+    
+    @include themify($themes) {
+      color: themed('btnHamburgerColor');
+      background-color: themed('sidebarBgColor');
+    }
+
+    &:hover {  
+      @include themify($themes) {
+        color: themed('btnHamburgerActiveColor');
+      }
+    }
+  }
+
+  &__close-btn {
+    display: flex;
+    justify-content: flex-end;
+    font-size: $icon-24;
+    cursor: pointer;
+
+    @include themify($themes) {
+      color: themed('sidebarBtnCloseColor');
+    }
+
+    &:hover {  
+      @include themify($themes) {
+        color: themed('sidebarBtnCloseActiveColor');
+      }
+    }
+  }
+
+  &__logo-img {
+    width: $sidebar-logo-default-width;    
+  }
+
+  &__contact-list {
+    margin: $sidebar-contacts-default-margin;
+  }
+
+  &__contact-item {
+    padding: $sidebar-contacts-item-default-padding;
+  }
+  
+  &__contact-link {
+    text-decoration: none;
+    cursor: pointer;
+    
+    @include themify($themes) {
+      color: themed('sidebarColor');
+    }
+
+    &:hover {    
+      text-decoration: underline;
+    }
+  }
+}
