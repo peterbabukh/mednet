@@ -10,20 +10,22 @@ $sidebar-logo-default-width: 40%;
 $sidebar-contacts-default-margin: 30px 0px;
 $sidebar-contacts-item-default-padding: 10px 0;
 $sidebar-default-box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.08);
+$sidebar-menu-content-z-index: 100;
 
 .sidebar {
+  position: absolute;
   display: flex;
   height: $sidebar-header-default-height;
   padding: $sidebar-header-default-padding;
-  box-shadow: $default-box-shadow;
 
   @include themify($themes) {
     color: themed('sidebarColor');
     background-color: themed('sidebarBgColor');
   }
 
-  @media (min-width: $screen-xs-max) {
-    display: none;
+  @media (max-width: $screen-xs-max) {
+    position: relative;
+    box-shadow: $sidebar-default-box-shadow;
   }
 
   &__menu-content {
@@ -32,29 +34,30 @@ $sidebar-default-box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.08);
     top: 0;
     width: $sidebar-default-width;
     max-width: $sidebar-max-width;
-    height: $sidebar-default-height;  
+    height: $sidebar-default-height;
     padding: $sidebar-padding;
     box-shadow: $sidebar-default-box-shadow;
+    z-index: $sidebar-menu-content-z-index;
 
     @include themify($themes) {
       color: themed('sidebarColor');
       background-color: themed('sidebarBgColor');
     }
   }
-  
+
   &__menu-hamburger {
     display: flex;
     align-items: center;
     padding-left: 4px;
     font-size: $icon-32;
     cursor: pointer;
-    
+
     @include themify($themes) {
       color: themed('btnHamburgerColor');
       background-color: themed('sidebarBgColor');
     }
 
-    &:hover {  
+    &:hover {
       @include themify($themes) {
         color: themed('btnHamburgerActiveColor');
       }
@@ -71,7 +74,7 @@ $sidebar-default-box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.08);
       color: themed('sidebarBtnCloseColor');
     }
 
-    &:hover {  
+    &:hover {
       @include themify($themes) {
         color: themed('sidebarBtnCloseActiveColor');
       }
@@ -79,7 +82,7 @@ $sidebar-default-box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.08);
   }
 
   &__logo-img {
-    width: $sidebar-logo-default-width;    
+    width: $sidebar-logo-default-width;
   }
 
   &__contact-list {
@@ -89,16 +92,16 @@ $sidebar-default-box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.08);
   &__contact-item {
     padding: $sidebar-contacts-item-default-padding;
   }
-  
+
   &__contact-link {
     text-decoration: none;
     cursor: pointer;
-    
+
     @include themify($themes) {
       color: themed('sidebarColor');
     }
 
-    &:hover {    
+    &:hover {
       text-decoration: underline;
     }
   }
