@@ -5,7 +5,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { FormattedMessage } from 'react-intl';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
@@ -25,6 +25,8 @@ import {
 } from '../../utils/axiosInterceptors';
 import { makeSelectTheme } from './selectors';
 
+import { HappyUserPage } from '../../modules/customer/containers/HappyUserPage';
+
 import './App.css';
 
 const helmetMessages = {
@@ -35,18 +37,21 @@ const helmetMessages = {
 export class AppComponent extends React.Component {
   render() {
     return (
-      <div className="app">
-        <Sidebar />
-        <Header />
-        <div className="main">
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route path="*" component={NotFound} />
-          </Switch>
+      <BrowserRouter>
+        <div className="app">
+          <Sidebar />
+          <Header />
+          <div className="main">
+            <Switch>
+              <Route path="/happy-user" component={HappyUserPage} />
+              <Route exact path="/" component={Dashboard} />
+              <Route path="*" component={NotFound} />
+            </Switch>
+          </div>
+          <Footer />
+          <ModalRoot />
         </div>
-        <Footer />
-        <ModalRoot />
-      </div>
+      </BrowserRouter>
     );
   }
 }

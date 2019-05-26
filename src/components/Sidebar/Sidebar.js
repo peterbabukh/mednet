@@ -9,7 +9,7 @@ import logoImg from '../../assets/images/mednet-logo.png';
 
 import './Sidebar.css';
 
-class Sidebar extends React.Component {
+class Sidebar extends React.PureComponent {
   state = {
     isSidebarOpened: false,
   };
