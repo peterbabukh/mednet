@@ -1,8 +1,6 @@
 export default {
   'app.title': 'MedNet',
   'app.description': 'MedNet',
-  'dashboard.title': 'MedNet',
-  'dashboard.description': 'MedNet',
 
   'common.copyright': 'Copyright ©',
   'common.yes': 'Yes',

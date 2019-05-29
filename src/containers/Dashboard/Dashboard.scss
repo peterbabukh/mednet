@@ -2,7 +2,18 @@
 @import '../../styles/_mixins';
 
 .dashboard {
-	display: flex;
-	align-items: flex-start;
-	padding: 0 $container-padding;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 $container-padding;
+
+  .about-health__list {
+    .about-health__item {
+      @include button();
+
+      .about-health__link {
+        color: $default-text-color;
+        text-decoration: none;
+      }
+    }
+  }
 }
