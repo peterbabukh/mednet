@@ -11,7 +11,11 @@ describe('containers.App.reducer', () => {
       loading: false,
       error: false,
       currentUser: '',
-      userData: fromJS({}),
+      userData: fromJS({
+        role: 'customer',
+        authorized: false,
+        healthProblems: fromJS({}),
+      }),
       locale: 'en',
       theme: DEFAULT_THEME,
       unsavedData: fromJS({}),
