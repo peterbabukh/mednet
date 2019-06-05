@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$product-item-default-img-height: 150px;
+$product-item-default-name-font-size: 18px;
+$product-item-default-price-margin: 5px 0;
+
+.random-products-banner {
+  @include card();
+
+  padding: $container-padding;
+
+  &__products-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__product-item {
+    @include card();
+
+    display: flex;
+    flex-direction: row;
+    border-radius: $default-border-radius;
+    margin: $container-margin;
+    padding: $container-padding;
+
+
+    &__img-preview {
+      height: $product-item-default-img-height;
+      margin-right: $container-padding;
+    }
+
+    &__name {
+      font-weight: bold;
+      font-size: $product-item-default-name-font-size;
+    }
+
+    &__price {
+      display: block;
+      font-weight: bold;
+      margin: $product-item-default-price-margin;
+    }
+
+    &__type {
+      display: inline-block;
+      font-size: small;
+      background-color: $hover-bg-color;
+      border-radius: $default-border-radius;
+      margin-top: $default-margin;      
+      padding: $default-padding;
+      color: $dark-theme-text-color;
+    }
+
+    &__description {
+      display: block;
+    }
+  }
+}
