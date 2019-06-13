@@ -22,3 +22,41 @@ Run tests related to changed files based on hg/git (uncommitted files):
 ```
 npm run test -- -o
 ```
+
+# API endpoints
+
+LogIn
+```
+// method: POST
+
+http://www.teamcofounder.com/api/v1/mednet/login
+
+// body
+{ email: demo@demo.com, password: demo }
+
+// response is something like this
+{
+  "profile": {
+    "dateOfBirth":"1986-04-12T00:00:00.000Z",
+    "lastName":"Smith",
+    "firstName":"John",
+  },
+  "position":"manager",
+  "permissions": ["statistics"],
+  "employee":true
+}
+```
+
+LogOut
+```
+// method: POST
+
+http://www.teamcofounder.com/api/v1/mednet/logout
+```
+
+Get banner products
+```
+// method: GET
+
+http://www.teamcofounder.com/api/v1/mednet/bannerProducts
+```

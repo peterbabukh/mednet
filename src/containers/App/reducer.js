@@ -29,11 +29,7 @@ const initialState = fromJS({
   loading: false,
   error: false,
   currentUser: '',
-  userData: {
-    role: 'customer',
-    authorized: false,
-    healthProblems: {},
-  },
+  userData: {},
   locale: activeLanguage,
   theme: appConstants.DEFAULT_THEME,
   unsavedData: {},
