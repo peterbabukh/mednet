@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Helmet from '../../components/HelmetIntl';
 import messages from './messages';
+import AsideBlock from '../../components/AsideBlock/AsideBlock';
 
 import './Dashboard.css';
 
@@ -30,6 +31,7 @@ class Dashboard extends React.PureComponent {
             </Link>
           </li>
         </ul>
+        <AsideBlock />
       </div>
     );
   }
