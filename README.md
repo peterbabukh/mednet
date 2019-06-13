@@ -32,7 +32,7 @@ LogIn
 http://www.teamcofounder.com/api/v1/mednet/login
 
 // body
-{ email: demo@demo.com, password: demo }
+{ email: demo@gmail.com, password: demo }
 
 // response is something like this
 {
