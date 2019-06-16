@@ -1,16 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import './AsideBlock.css';
+import './AsideBlock.scss';
 
-export default class AsideBlock extends Component {
+export default class AsideBlock extends React.PureComponent {
   state = {
     isAsideBlockOpened: false,
-  };
-
-  asideBlockOnCloseHandler = () => {
-    this.setState({
-      isAsideBlockOpened: false,
-    });
   };
 
   toggleAsideBlock = () => {
@@ -24,7 +18,7 @@ export default class AsideBlock extends Component {
     return (
       <div className="aside-block__content">
         <i
-          onClick={this.asideBlockOnCloseHandler}
+          onClick={this.toggleAsideBlock}
           className="aside-block__close-btn fa fa-times"
         />
       </div>
@@ -35,7 +29,7 @@ export default class AsideBlock extends Component {
     return (
       <i
         onClick={this.toggleAsideBlock}
-        className="aside-block__dots fas fa-ellipsis-v"
+        className="aside-block__dots fa fa-ellipsis-v"
       />
     );
   };
