@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+$asideblock-default-height: calc(100% - 62px);
+$asideblock-default-width: 280px;
+$asideblock-max-width: 70%;
+$asideblock-default-box-shadow: 0 12px 12px 6px rgba(0, 0, 0, 0.08);
+$asideblock-menu-content-z-index: 100;
+
+.aside-block {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  right: 15px;
+  
+  &__content {
+    position: fixed;
+    right: 0;
+    top: 66px;
+    width: $asideblock-default-width;
+    max-width: $asideblock-max-width;
+    height: $asideblock-default-height;
+    box-shadow: $asideblock-default-box-shadow;
+    z-index: $asideblock-menu-content-z-index;
+  }
+  &__close-btn {
+    display: flex;
+    justify-content: flex-end;
+    font-size: $icon-32;
+    margin: 15px 15px 0 0;
+    cursor: pointer;
+  }
+  &__dots {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 36px;
+    cursor: pointer;
+  }
+}
