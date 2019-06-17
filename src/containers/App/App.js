@@ -66,7 +66,7 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
 
-    axios.defaults.withCredentials = true;
+    axios.defaults.withCredentials = false;
     axios.defaults.headers.common['Content-Type'] = 'application/json';
     axios.interceptors.response.use(
       responseInterceptor.bind(this),
