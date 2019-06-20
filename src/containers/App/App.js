@@ -25,8 +25,6 @@ import {
 } from '../../utils/axiosInterceptors';
 import { makeSelectTheme } from './selectors';
 
-import { HappyUserPage } from '../../modules/customer/containers/HappyUserPage';
-
 import './App.css';
 
 const helmetMessages = {
@@ -43,7 +41,6 @@ export class AppComponent extends React.Component {
           <Header />
           <div className="main">
             <Switch>
-              <Route path="/happy-user" component={HappyUserPage} />
               <Route exact path="/" component={Dashboard} />
               <Route path="*" component={NotFound} />
             </Switch>

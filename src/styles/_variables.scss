@@ -35,6 +35,7 @@ $font-condensed: "PT Sans Narrow", $font-default;
 $text-default-font-size: 16px;
 $text-sm-font-size: 14px;
 $text-xs-font-size: 12px;
+$text-m-font-size: 18px;
 
 /* text colors */
 $default-text-color: $default-color;
@@ -74,12 +75,15 @@ $textarea-default-max-height: 200px;
 $compact-table-row-height: $input-default-height;
 $pagination-item-height: 18px;
 $grid-row-min-height: 45px;
+$product-item-preview-img-height: 150px;
+
 
 /* Width */
 $button-container-max-width: 500px;
 $button-max-width: 200px;
 $button-min-width: 100px;
 $input-compact-width: 70px;
+$product-item-preview-img-width: 150px;
 
 /* Margin */
 $default-margin: 5px;

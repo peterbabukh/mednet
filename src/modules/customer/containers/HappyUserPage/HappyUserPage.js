@@ -5,22 +5,22 @@ import ProductsCollection from '../../../../containers/ProductsCollection';
 import RandomProductsBanner from '../../../../components/RandomProductsBanner';
 import WizardForm from '../../../../components/WizardForm';
 
+import './HappyUserPage.css';
+
 class HappyUserPage extends React.PureComponent {
   render() {
     return (
-      <div>
-        <ul>
-          <li>
-            <WizardForm />
-          </li>
-          <li>
-            <RandomProductsBanner />
-          </li>
-          <li>
-            <ProductsCollection />
-          </li>
-        </ul>
-      </div>
+      <ul className="happy-user-page">
+        <li>
+          <WizardForm />
+        </li>
+        <li>
+          <RandomProductsBanner />
+        </li>
+        <li>
+          <ProductsCollection />
+        </li>
+      </ul>
     );
   }
 }

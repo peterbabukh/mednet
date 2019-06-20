@@ -3,6 +3,7 @@ import { LOCATION_CHANGE } from 'react-router-redux';
 import { reducer as formReducer } from 'redux-form/immutable';
 
 import globalReducer from './containers/App/reducer';
+import dashboardReducer from './containers/Dashboard/reducer';
 import { fromJS } from 'immutable';
 
 const routeInitialState = fromJS({
@@ -25,6 +26,7 @@ export default function createReducer(injectedReducers) {
   return combineReducers({
     route: routeReducer,
     global: globalReducer,
+    dashboard: dashboardReducer,
     form: formReducer,
     ...injectedReducers,
   });

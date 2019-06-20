@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 export const APP_NAME = 'MedNet';
 export const ROOT_NODE = 'root';
 
+export const EMPTY_ARRAY = [];
+export const EMPTY_OBJECT = {};
+export const DEFAULT_FUNC = () => {};
+
 export const OVERLAY_MESSAGE_COMPONENT = 'OVERLAY_MESSAGE_COMPONENT';
 
 export const REACT_TOASTIFY_AUTO_CLOSE_DELAY = 5000;
