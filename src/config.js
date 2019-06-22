@@ -14,6 +14,15 @@ if (env === 'development') {
   baseUrl = BASE_URL;
 }
 
+export const ApiBaseUrl = 'http://www.teamcofounder.com/api/v1/mednet';
+
+export const loginOrRegisterApiUrl = `${ApiBaseUrl}/loginOrRegister`;
+export const editUserProfileApiUrl = `${ApiBaseUrl}/editUserProfile`;
+export const getBannerProductsApiUrl = `${ApiBaseUrl}/bannerProducts`;
+
 export default {
   baseUrl,
+  loginOrRegisterApiUrl,
+  editUserProfileApiUrl,
+  getBannerProductsApiUrl,
 };

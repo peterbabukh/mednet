@@ -1,0 +1,50 @@
+export default {
+  'form.password': 'Пароль',
+  'form.passwordRepeat': 'Повторите пароль',
+
+  'form.firstName': 'Имя',
+  'form.lastName': 'Фамилия',
+  'form.email': 'Email',
+  'form.phone': 'Телефон',
+  'form.sex': 'Пол',
+  'form.male': 'Мужской',
+  'form.female': 'Женский',
+  'form.age': 'Возраст',
+  'form.weight': 'Вес',
+  'form.employed': 'Работающий',
+  'form.interests': 'Интересы',
+  'form.spouse': 'Супруг',
+  'form.child': 'Ребенок',
+  'form.father': 'Отец',
+  'form.mother': 'Мать',
+  'form.healthProblems': 'Проблемы со здоровьем',
+  'form.notes': 'Заметки',
+  'form.country': 'Страна',
+  'form.city': 'Город',
+
+  'form.required': 'Обязательное поле',
+  'form.invalidEmail': 'Неправильный email адрес',
+  'form.passwordsDoNotMatch': 'Passwords do not match',
+
+  'form.wizard.introAboutUserInfo':
+    'We would like to know information about you:',
+  'form.text.RegistrationComplete': 'Thank you for registering.',
+  'form.text.wantToRegister': 'Хотите зарегистрироваться?',
+  'form.text.registrationBonuses':
+    'Бонусы за регистрацию: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+
+  'interests.sport': 'Спорт',
+  'interests.creation': 'Творчество',
+  'interests.films': 'Фильмы',
+  'interests.music': 'Музыка',
+  'interests.books': 'Книги',
+  'interests.travels': 'Путешествия',
+  'interests.other': 'Другое',
+
+  'healthProblem.allergy': 'Аллергия',
+  'healthProblem.diabetes': 'Диабет',
+  'healthProblem.depression': 'Депрессия',
+  'healthProblem.obesity': 'Ожирение',
+  'healthProblem.highBloodPressure': 'Высокое кровяное давление',
+  'healthProblem.other': 'Другое',
+};
