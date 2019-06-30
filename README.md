@@ -54,6 +54,40 @@ LogOut
 http://www.teamcofounder.com/api/v1/mednet/logout
 ```
 
+loginOrRegister
+```
+// method: POST
+
+http://www.teamcofounder.com/api/v1/mednet/loginOrRegister
+
+// body
+{
+email: <email>,
+password: <password>,
+data: {}, // optional, something like data: {employee: false},
+}
+
+// response is user data object
+```
+
+editUserProfile
+```
+// method: PUT
+
+http://www.teamcofounder.com/api/v1/mednet/editUserProfile
+
+// body
+{
+email: <email>,
+data: { // user data fields to be updated.
+  ...user.data,
+  interests: [{ id: 'Reading' }],
+},
+}
+
+// response is user updated data object
+```
+
 Get banner products
 ```
 // method: GET
