@@ -5,7 +5,7 @@ import { injectIntl, intlShape } from 'react-intl';
 
 import { toType } from '../../utils/common';
 
-import './Select.css';
+import './Select.scss';
 
 export const getValue = option => {
   return option.value || (option.value === '' || option.value === 0)

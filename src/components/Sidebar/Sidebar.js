@@ -7,7 +7,7 @@ import { contactsMap } from '../../constants';
 
 import logoImg from '../../assets/images/mednet-logo.png';
 
-import './Sidebar.css';
+import './Sidebar.scss';
 
 class Sidebar extends React.PureComponent {
   state = {

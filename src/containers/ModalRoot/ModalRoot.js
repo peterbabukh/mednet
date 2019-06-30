@@ -12,7 +12,7 @@ import { makeSelectModalComponent } from './selectors';
 import { MODAL_ROOT } from './constants';
 import { OVERLAY_MESSAGE_COMPONENT } from '../../constants';
 
-import './ModalRoot.css';
+import './ModalRoot.scss';
 
 const MODAL_COMPONENTS = {
   [OVERLAY_MESSAGE_COMPONENT]: OverlayMessage,

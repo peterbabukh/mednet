@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import { LOADING_SPINNER_SIZES } from './constants';
 
-import './LoadingSpinner.css';
+import './LoadingSpinner.scss';
 
 const LoadingSpinner = ({ className, size }) => (
   <div className={classnames('loading-spinner', className, size)} />

@@ -32,7 +32,7 @@ import {
 } from './containers/App/actions';
 import { translationMessages } from './i18n';
 
-import './index.css';
+import './index.scss';
 
 checkMobile();
 waitForFonts();

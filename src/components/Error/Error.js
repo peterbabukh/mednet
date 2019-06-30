@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import './Error.css';
+import './Error.scss';
 
 class Error extends React.PureComponent {
   renderError(error, index = 0) {

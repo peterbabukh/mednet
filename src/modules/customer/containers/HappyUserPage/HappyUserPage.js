@@ -5,7 +5,7 @@ import ProductsCollection from '../../../../containers/ProductsCollection';
 import RandomProductsBanner from '../../../../components/RandomProductsBanner';
 import WizardForm from '../../../../components/WizardForm';
 
-import './HappyUserPage.css';
+import './HappyUserPage.scss';
 
 class HappyUserPage extends React.PureComponent {
   render() {

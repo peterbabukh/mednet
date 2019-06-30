@@ -8,7 +8,7 @@ import { setTheme } from '../../containers/App/actions';
 import { makeSelectTheme } from '../../containers/App/selectors';
 import { DEFAULT_THEME, DARK_THEME } from '../../containers/App/constants';
 
-import './ThemeSwitch.css';
+import './ThemeSwitch.scss';
 
 export class ThemeSwitch extends React.PureComponent {
   onChange = event => {

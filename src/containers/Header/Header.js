@@ -3,7 +3,7 @@ import React from 'react';
 import LocaleToggle from '../LocaleToggle';
 import ThemeSwitch from '../../components/ThemeSwitch';
 
-import './Header.css';
+import './Header.scss';
 
 const Header = () => (
   <div className="header">

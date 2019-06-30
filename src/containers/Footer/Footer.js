@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 
 import messages from './messages';
 
-import './Footer.css';
+import './Footer.scss';
 
 export class Footer extends React.Component {
   render() {

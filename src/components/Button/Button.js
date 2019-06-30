@@ -4,7 +4,7 @@ import React from 'react';
 
 import { BUTTON_VARIANTS } from './constants';
 
-import './Button.css';
+import './Button.scss';
 
 const getVariant = variant => {
   return typeof variant === 'object' ? variant.join(' ') : variant;

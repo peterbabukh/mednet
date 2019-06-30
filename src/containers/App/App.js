@@ -7,6 +7,7 @@ import { createStructuredSelector } from 'reselect';
 import { FormattedMessage } from 'react-intl';
 import { Switch, Route, withRouter, BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.min.css';
 
 import Dashboard from '../Dashboard';
@@ -25,7 +26,7 @@ import {
 } from '../../utils/axiosInterceptors';
 import { makeSelectTheme } from './selectors';
 
-import './App.css';
+import './App.scss';
 
 const helmetMessages = {
   title: messages.appTitle,

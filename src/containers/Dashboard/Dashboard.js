@@ -18,7 +18,7 @@ import Helmet from '../../components/HelmetIntl';
 import messages from './messages';
 import { HappyUserPage } from '../../modules/customer/containers/HappyUserPage';
 
-import './Dashboard.css';
+import './Dashboard.scss';
 
 const helmetMessages = {
   title: messages.dashboardTitle,

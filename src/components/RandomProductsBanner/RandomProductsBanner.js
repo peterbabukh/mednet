@@ -12,7 +12,7 @@ import {
 } from '../../containers/Dashboard/selectors';
 import { randomProductsBannerOptions } from './constants';
 
-import './RandomProductsBanner.css';
+import './RandomProductsBanner.scss';
 
 const { updateInterval, amountRandomProducts } = randomProductsBannerOptions;
 
