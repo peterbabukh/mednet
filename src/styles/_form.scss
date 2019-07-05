@@ -1,0 +1,96 @@
+@import './variables';
+@import './mixins';
+
+.form {
+  @include card();
+
+  margin-bottom: $wizard-form-margin-bottom;
+  padding: $wizard-form-padding;
+
+  &__btn-next,
+  &__btn-prev,
+  &__btn-submit,
+  &__btn-register {
+    @include button();
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: $default-margin * 2 $default-margin;
+  }
+
+  &__btn-next:after {
+    font: $font-awesome;
+    content: '\F054';
+    margin-left: $default-margin;
+  }
+
+  &__btn-prev:before {
+    font: $font-awesome;
+    content: '\F053';
+    margin-right: $default-margin;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: $default-margin * 2 $default-margin;
+  }
+
+  &__container-input {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    max-width: $input-max-width;
+  }
+
+  &__input {
+    @include input();
+  }
+
+  &__container-checkbox {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    margin-top: $default-margin;
+    max-width: $wizard-form-container-checkbox-max-width;
+  }
+
+  &__label {
+    font-weight: bold;
+    margin-right: $default-margin * 2;
+    min-width: $wizard-form-label-min-width;
+    text-align: right;
+    padding: $default-padding $default-padding * 2;
+  }
+
+  &__question-circle {
+    display: flex;
+    padding-left: $default-padding;
+    cursor: pointer;
+  }
+
+  &__question-circle:before {
+    font: $font-awesome;
+    content: "\f059";
+    color: $light-blue;
+  }
+
+  &__error {
+    border: none;
+    font-weight: bold;
+    color: $error-red;
+    padding: $default-padding $default-padding * 2;
+
+    &:before {
+      font: $font-awesome;
+      content: '\F06A';
+      margin-right: $default-margin;
+    }
+  }
+
+  &__textarea {
+    @include input();
+  }
+}

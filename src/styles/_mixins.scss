@@ -156,7 +156,7 @@
 @mixin input {
 	box-sizing: border-box;
 	font-size: $text-default-font-size;
-	min-width: $grid-cell-min-width;
+	min-width: $input-compact-width;
 	padding: $input-padding;
   background-color: $white;
   background-clip: padding-box;

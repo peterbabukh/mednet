@@ -5,6 +5,7 @@ import appConstants from './constants';
 import { EMPTY_ARRAY } from '../../constants/app';
 import { showErrorToast } from '../../utils/common';
 import { updateRandomBannerProducts, setError } from './actions';
+import { getBannerProductsApiUrl } from '../../config';
 
 function* fetchBannerAsync(action) {
   try {
@@ -12,8 +13,7 @@ function* fetchBannerAsync(action) {
 
     yield put(setError(''));
 
-    const request = () =>
-      axios.get('http://www.teamcofounder.com/api/v1/mednet/bannerProducts');
+    const request = () => axios.get(getBannerProductsApiUrl);
     const response = yield call(request);
 
     const shuffled = response.data.sort(() => 0.5 - Math.random());

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import ProductsCollection from '../../../../containers/ProductsCollection';
 import RandomProductsBanner from '../../../../components/RandomProductsBanner';
-import WizardForm from '../../../../components/WizardForm';
+import WizardForm from './components/WizardForm';
 
 import './HappyUserPage.scss';
 

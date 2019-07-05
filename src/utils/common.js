@@ -152,6 +152,32 @@ export const showErrorToast = error => {
   }
 };
 
+const toastIDs = Object.create(null);
+
+export const showSuccessToast = msg => {
+  const message = typeof msg === 'string' ? msg : <FormattedMessage {...msg} />;
+
+  const id = 'SUCCESS_TOAST_ID';
+
+  if (!toast.isActive(toastIDs[id])) {
+    toastIDs[id] = toast.success(message, {
+      autoClose: REACT_TOASTIFY_AUTO_CLOSE_DELAY,
+    });
+  }
+};
+
+export const showInfoToast = msg => {
+  const message = typeof msg === 'string' ? msg : <FormattedMessage {...msg} />;
+
+  const id = 'INFO_TOAST_ID';
+
+  if (!toast.isActive(toastIDs[id])) {
+    toastIDs[id] = toast.info(message, {
+      autoClose: REACT_TOASTIFY_AUTO_CLOSE_DELAY,
+    });
+  }
+};
+
 export const getCachedLang = () =>
   localStorage.getItem(LOCAL_LANG) || DEFAULT_LOCALE;
 

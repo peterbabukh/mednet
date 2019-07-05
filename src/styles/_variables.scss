@@ -29,9 +29,15 @@ $hover-grey-color: $mid-grey;
 $text-highlight-color: $yellow;
 
 /* Fonts */
-$font-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-default: "Open Sans", $font-fallback;
-$font-condensed: "PT Sans Narrow", $font-default;
+$font-fallback: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$font-default: "Open Sans",
+$font-fallback;
+$font-condensed: "PT Sans Narrow",
+$font-default;
+$font-awesome: normal normal normal 14px/1 FontAwesome;
 $text-default-font-size: 16px;
 $text-sm-font-size: 14px;
 $text-xs-font-size: 12px;
@@ -83,13 +89,17 @@ $button-container-max-width: 500px;
 $button-max-width: 200px;
 $button-min-width: 100px;
 $input-compact-width: 70px;
+$input-max-width: 500px;
 $product-item-preview-img-width: 150px;
+$wizard-form-container-checkbox-max-width: 500px;
+$wizard-form-label-min-width: 150px;
 
 /* Margin */
 $default-margin: 5px;
 $container-margin: $default-margin * 2;
 $inline-siblings-default-margin: 4px;
 $siblings-block-margin: 30px;
+$wizard-form-margin-bottom: $default-margin * 3;
 
 /* Paddings */
 $default-padding: 5px;
@@ -104,6 +114,7 @@ $overlay-container-padding: 40px;
 $overlay-container-padding-small: $overlay-container-padding / 2;
 $button-default-padding: 0.4rem 0.8rem;
 $button-sm-default-padding: 0.3rem 0.8rem;
+$wizard-form-padding: $default-padding * 3;
 
 /* Modal */
 $modal-bg-color-light: #fff;

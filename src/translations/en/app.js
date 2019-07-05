@@ -7,6 +7,11 @@ export default {
   'common.no': 'No',
   'common.button.cancel': 'Cancel',
   'common.button.close': 'Close',
+  'common.button.next': 'Next',
+  'common.button.previous': 'Previous',
+  'common.button.submit': 'Submit',
+  'common.button.okRegisterMe': 'Ok, register me',
+  'common.button.noLater': 'No, later',
 
   'localeToggle.en': 'EN',
   'localeToggle.ru': 'RU',
@@ -17,6 +22,8 @@ export default {
   'site.pageNotFound': 'This route does not exist.',
 
   'errors.noConnection': 'No connection with the server.',
+  'errors.formRegistrationEmpty':
+    'For registration fill in all the fields in the form!',
   'errors.formIsInvalid': 'Please, check data in the invalid fields: {fields}',
   'errors.formNotSubmitted': 'The form failed to be submitted: {text}',
   'errors.dataLoadingFailed': 'Data loading failed.',
